@@ -23,16 +23,3 @@ cpp_server:
 
 cpp_client:
 	bazel run cpp/client
-
-csharp_server:
-	bazel build csharp/GreeterServer && $(BAZEL_BIN)/examples/helloworld/csharp/GreeterServer/GreeterServer
-
-csharp_client:
-	bazel run csharp/GreeterClient
-
-gateway:
-	bazel build grpc_gateway:greeter
-	$(BAZEL_BIN)/examples/helloworld/grpc_gateway/greeter
-
-curl_post:
-	curl -X POST -k http://localhost:8080/v1/helloworld/sayhello -d '{"name": "gRPC-gateway!"}'

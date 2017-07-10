@@ -13,9 +13,8 @@ DEPS = {
     # with all BUILD files ready to go.  To update, pick the
     # newest-ish commit-id off that branch.
     "boringssl": {
-        "rule": "git_repository",
-        "remote":  "https://boringssl.googlesource.com/boringssl",
-        "commit": "14443198abcfc48f0420011a636b220e58e18610", # Nov 11 2016
+        "rule": "http_archive",
+        "url": "https://boringssl.googlesource.com/boringssl/+archive/14443198abcfc48f0420011a636b220e58e18610.tar.gz", # Nov 11 2016
     },
 
     # libssl is required for c++ grpc where it is expected in
@@ -27,9 +26,9 @@ DEPS = {
 
     # C-library for zlib
     "com_github_madler_zlib": {
-        "rule": "new_git_repository",
-        "remote": "https://github.com/madler/zlib",
-        "tag": "v1.2.8",
+        "rule": "new_http_archive",
+        "url": "https://github.com/madler/zlib/archive/v1.2.8.tar.gz",
+        "strip_prefix": "zlib-1.2.8",
         "build_file": str(Label("//protobuf:build_file/com_github_madler_zlib.BUILD")),
     },
 
@@ -69,9 +68,9 @@ DEPS = {
 
     # GTest is for our own internal cc tests.
     "gtest": {
-        "rule": "new_git_repository",
-        "remote": "https://github.com/google/googletest.git",
-        "commit": "ed9d1e1ff92ce199de5ca2667a667cd0a368482a",
+        "rule": "new_http_archive",
+        "url": "https://github.com/google/googletest/archive/ed9d1e1ff92ce199de5ca2667a667cd0a368482a.tar.gz",
+        "strip_prefix": "googletest-ed9d1e1ff92ce199de5ca2667a667cd0a368482a",
         "build_file": str(Label("//protobuf:build_file/gtest.BUILD")),
     },
 
