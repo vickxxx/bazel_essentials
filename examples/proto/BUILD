@@ -20,7 +20,7 @@ cc_proto_library(
 )
 
 go_proto_library(
-    name = "go_default_library",
+    name = "go",
     protos = [":protos"],
     verbose = 0,
 )

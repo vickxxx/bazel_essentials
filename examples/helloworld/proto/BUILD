@@ -25,7 +25,7 @@ cc_proto_library(
 go_proto_library(
     name = "go",
     proto_deps = [
-        "//examples/proto:go_default_library",
+        "//examples/proto:go",
     ],
     protos = [":protos"],
     verbose = 0,
