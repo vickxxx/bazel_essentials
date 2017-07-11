@@ -14,16 +14,18 @@ DEPS = {
     # Hooray! The boringssl team provides a "master-with-bazel" branch
     # with all BUILD files ready to go.  To update, pick the
     # newest-ish commit-id off that branch.
-    "boringssl": {
+    "com_github_google_boringssl": {
         "rule": "http_archive",
-        "url": "https://boringssl.googlesource.com/boringssl/+archive/14443198abcfc48f0420011a636b220e58e18610.tar.gz", # Nov 11 2016
+        "url": "https://github.com/google/boringssl/archive/c7bd04874d9f61d6c8029a588855703cf468ba5e.tar.gz",
+        # "url": "https://boringssl.googlesource.com/boringssl/+archive/14443198abcfc48f0420011a636b220e58e18610.tar.gz", # Nov 11 2016
+        "strip_prefix": "boringssl-c7bd04874d9f61d6c8029a588855703cf468ba5e",
     },
 
     # libssl is required for c++ grpc where it is expected in
     # //external:libssl.  This can be either boringssl or openssl.
     "libssl": {
         "rule": "bind",
-        "actual": "@boringssl//:ssl",
+        "actual": "@com_github_google_boringssl//:ssl",
     },
 
     # C-library for zlib
@@ -69,10 +71,10 @@ DEPS = {
     },
 
     # GTest is for our own internal cc tests.
-    "gtest": {
+    "com_github_google_googletest": {
         "rule": "new_http_archive",
-        "url": "https://github.com/google/googletest/archive/ed9d1e1ff92ce199de5ca2667a667cd0a368482a.tar.gz",
-        "strip_prefix": "googletest-ed9d1e1ff92ce199de5ca2667a667cd0a368482a",
+        "url": "https://github.com/google/googletest/archive/release-1.8.0.tar.gz",
+        "strip_prefix": "googletest-release-1.8.0",
         "build_file": str(Label("//protobuf:build_file/gtest.BUILD")),
     },
 

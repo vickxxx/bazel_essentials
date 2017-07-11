@@ -29,7 +29,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package org.pubref.rules_protobuf.examples.helloworld.client;
+package com.github.lingochamp.bazel_essentials.examples.helloworld.client;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
@@ -39,9 +39,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.pubref.rules_protobuf.examples.helloworld.GreeterGrpc;
-import org.pubref.rules_protobuf.examples.helloworld.HelloRequest;
-import org.pubref.rules_protobuf.examples.helloworld.HelloReply;
+import com.github.lingochamp.bazel_essentials.examples.helloworld.GreeterGrpc;
+import com.github.lingochamp.bazel_essentials.examples.helloworld.HelloRequest;
+import com.github.lingochamp.bazel_essentials.examples.helloworld.HelloReply;
 
 /**
  * A simple client that requests a greeting from the {@link

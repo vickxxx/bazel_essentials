@@ -37,10 +37,10 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/lingochamp/rules_protobuf/examples/helloworld/proto/go"
-	//  ^A                               ^B                        ^C
+	pb "github.com/lingochamp/bazel_essentials/examples/helloworld/proto/go"
+	//  ^A                                     ^B                        ^C
 	//
-	// A: go_prefix("github.com/pubref/rules_protobuf")
+	// A: go_prefix("github.com/lingochamp/bazel_essentials")
 	// B: path to proto file directory "//examples/helloworld/proto"
 	// C: name of BUILD target that generated the protobufs: ":go"
 	"golang.org/x/net/context"

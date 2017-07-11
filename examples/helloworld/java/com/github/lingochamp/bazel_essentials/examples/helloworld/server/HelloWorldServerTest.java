@@ -1,4 +1,4 @@
-package org.pubref.rules_protobuf.examples.helloworld.server;
+package com.github.lingochamp.bazel_essentials.examples.helloworld.server;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

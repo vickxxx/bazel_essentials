@@ -1,4 +1,4 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_repository", "new_go_repository")
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_repository")
 load("//protobuf:rules.bzl", "proto_compile", "proto_repositories")
 load("//go:deps.bzl", "DEPS")
 

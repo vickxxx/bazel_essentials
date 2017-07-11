@@ -1,4 +1,4 @@
-package org.pubref.rules_protobuf.examples.helloworld.client;
+package com.github.lingochamp.bazel_essentials.examples.helloworld.client;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -12,7 +12,7 @@ import org.junit.AfterClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import org.pubref.rules_protobuf.examples.helloworld.server.HelloWorldServer;
+import com.github.lingochamp.bazel_essentials.examples.helloworld.server.HelloWorldServer;
 
 /**
  * A simple integration test that runs the server at startup.

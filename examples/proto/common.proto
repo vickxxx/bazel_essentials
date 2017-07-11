@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option java_package = "org.pubref.rules_protobuf.examples";
+option java_package = "com.github.lingochamp.bazel_essentials.examples";
 option java_outer_classname = "CommonProto";
 option go_package = "this.is.ignored";
 

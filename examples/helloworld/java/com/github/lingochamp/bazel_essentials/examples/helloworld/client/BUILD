@@ -3,20 +3,20 @@ java_test(
     size = "small",
     srcs = ["HelloWorldClientTest.java"],
     tags = ["exclusive"],
-    test_class = "org.pubref.rules_protobuf.examples.helloworld.client.HelloWorldClientTest",
+    test_class = "com.github.lingochamp.bazel_essentials.examples.helloworld.client.HelloWorldClientTest",
     runtime_deps = [
         "//java:netty_runtime_deps",
     ],
     deps = [
         ":client",
-        "//examples/helloworld/java/org/pubref/rules_protobuf/examples/helloworld/server",
+        "//examples/helloworld/java/com/github/lingochamp/bazel_essentials/examples/helloworld/server",
         "@junit_junit_4//jar",
     ],
 )
 
 java_binary(
     name = "netty",
-    main_class = "org.pubref.rules_protobuf.examples.helloworld.client.HelloWorldClient",
+    main_class = "com.github.lingochamp.bazel_essentials.examples.helloworld.client.HelloWorldClient",
     runtime_deps = [
         ":client",
         "//java:netty_runtime_deps",

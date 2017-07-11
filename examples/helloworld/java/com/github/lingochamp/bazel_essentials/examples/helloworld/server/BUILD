@@ -5,7 +5,7 @@ java_test(
     size = "small",
     srcs = ["HelloWorldServerTest.java"],
     tags = ["exclusive"],  # Address already in use if another server being tested has same port
-    test_class = "org.pubref.rules_protobuf.examples.helloworld.server.HelloWorldServerTest",
+    test_class = "com.github.lingochamp.bazel_essentials.examples.helloworld.server.HelloWorldServerTest",
     runtime_deps = [
         "//java:netty_runtime_deps",
     ],
@@ -17,7 +17,7 @@ java_test(
 
 java_binary(
     name = "netty",
-    main_class = "org.pubref.rules_protobuf.examples.helloworld.server.HelloWorldServer",
+    main_class = "com.github.lingochamp.bazel_essentials.examples.helloworld.server.HelloWorldServer",
     runtime_deps = [
         ":server",
         "//java:netty_runtime_deps",

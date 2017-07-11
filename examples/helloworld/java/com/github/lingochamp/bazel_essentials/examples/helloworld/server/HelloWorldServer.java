@@ -28,7 +28,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package org.pubref.rules_protobuf.examples.helloworld.server;
+package com.github.lingochamp.bazel_essentials.examples.helloworld.server;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
@@ -37,9 +37,9 @@ import io.grpc.stub.StreamObserver;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-import org.pubref.rules_protobuf.examples.helloworld.GreeterGrpc;
-import org.pubref.rules_protobuf.examples.helloworld.HelloRequest;
-import org.pubref.rules_protobuf.examples.helloworld.HelloReply;
+import com.github.lingochamp.bazel_essentials.examples.helloworld.GreeterGrpc;
+import com.github.lingochamp.bazel_essentials.examples.helloworld.HelloRequest;
+import com.github.lingochamp.bazel_essentials.examples.helloworld.HelloReply;
 
 /**
  * Server that manages startup/shutdown of a {@code Greeter} server.

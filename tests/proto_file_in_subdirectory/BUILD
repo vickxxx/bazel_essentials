@@ -7,7 +7,7 @@ cc_test(
     copts = ["-Iexternal/gtest/include"],
     deps = [
         ":protolib",
-        "@gtest//:gtest",
+        "@com_github_google_googletest//:gtest",
     ],
 )
 

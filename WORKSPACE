@@ -1,33 +1,16 @@
-workspace(name = "com_github_lingochamp_rules_protobuf")
+workspace(name = "com_github_lingochamp_bazel_essentials")
 
 # ================================================================
 # Go support requires rules_go
 # ================================================================
 
-http_archive(
-    name = "io_bazel_rules_go",
-    urls = [
-        "http://mirror.bazel.build/github.com/bazelbuild/rules_go/archive/69cc1f1cb88496fd8d7d76a7bd8c828967faf9f0.tar.gz",
-        "https://github.com/bazelbuild/rules_go/archive/69cc1f1cb88496fd8d7d76a7bd8c828967faf9f0.tar.gz",
-    ],
-    strip_prefix = "rules_go-69cc1f1cb88496fd8d7d76a7bd8c828967faf9f0",
-)
+load("//go:init.bzl", "init_go")
 
-new_local_repository(
-    name = "local_go_linux",
-    path = "/usr/lib/go",
-    build_file_content = "",
-)
+init_go()
 
-new_local_repository(
-    name = "local_go_mac",
-    path = "/usr/local/go",
-    build_file_content = "",
-)
+load("//go:repositories.bzl", "go_repositories")
 
-load("@io_bazel_rules_go//go:def.bzl", "go_repositories", "new_go_repository")
-
-go_repositories(go_linux = "@local_go_linux", go_darwin = "@local_go_mac")
+go_repositories()
 
 # ================================================================
 # Specific Languages Support

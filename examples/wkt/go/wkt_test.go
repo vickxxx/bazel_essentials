@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	fd "github.com/golang/protobuf/protoc-gen-go/descriptor"
-	wkt "github.com/lingochamp/rules_protobuf/examples/wkt/go/protolib"
+	wkt "github.com/lingochamp/bazel_essentials/examples/wkt/go/protolib"
 )
 
 func TestWkt(t *testing.T) {

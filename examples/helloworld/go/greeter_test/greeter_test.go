@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
-	greeter "github.com/lingochamp/rules_protobuf/examples/helloworld/go/server/greeter"
-	pb "github.com/lingochamp/rules_protobuf/examples/helloworld/proto/go"
+	greeter "github.com/lingochamp/bazel_essentials/examples/helloworld/go/server/greeter"
+	pb "github.com/lingochamp/bazel_essentials/examples/helloworld/proto/go"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )
