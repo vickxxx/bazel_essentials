@@ -37,13 +37,12 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/pubref/rules_protobuf/examples/helloworld/proto/go"
+	pb "github.com/lingochamp/rules_protobuf/examples/helloworld/proto/go"
 	//  ^A                               ^B                        ^C
 	//
 	// A: go_prefix("github.com/pubref/rules_protobuf")
 	// B: path to proto file directory "//examples/helloworld/proto"
 	// C: name of BUILD target that generated the protobufs: ":go"
-
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )

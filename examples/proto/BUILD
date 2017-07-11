@@ -47,17 +47,17 @@ ruby_proto_compile(
 # This conflicts with outputs from other rules here but demonstrates
 # how to generate multiple language outputs simultaneously.
 #
-# proto_compile(
-#     name = "pluriproto",
-#     protos = [":protos"],
-#     langs = [
-#         "//ruby",
-#         "//java",
-#         "//java:nano",
-#         "//python",
-#         "//cpp",
-#         "//go",
-#     ],
-#     verbose = 2,
-#     with_grpc = True,
-# )
+#proto_compile(
+#    name = "pluriproto",
+#    protos = [":protos"],
+#    langs = [
+#        "//ruby",
+#        "//java",
+#        "//java:nano",
+#        "//python",
+#        "//cpp",
+#        "//go",
+#    ],
+#    verbose = 2,
+#    with_grpc = True,
+#)

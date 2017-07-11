@@ -1,21 +1,19 @@
 package greeter_test
 
 import (
-	"testing"
 	"log"
-	"os"
 	"net"
+	"os"
+	"testing"
 
+	greeter "github.com/lingochamp/rules_protobuf/examples/helloworld/go/server/greeter"
+	pb "github.com/lingochamp/rules_protobuf/examples/helloworld/proto/go"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
-
-	greeter "github.com/pubref/rules_protobuf/examples/helloworld/go/server/greeter"
-
-	pb "github.com/pubref/rules_protobuf/examples/helloworld/proto/go"
 )
 
 const (
-	port = ":50051"
+	port        = ":50051"
 	address     = "localhost:50051"
 	defaultName = "world"
 )

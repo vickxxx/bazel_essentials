@@ -2,6 +2,7 @@ syntax = "proto3";
 
 option java_package = "org.pubref.rules_protobuf.examples";
 option java_outer_classname = "CommonProto";
+option go_package = "this.is.ignored";
 
 package common;
 
@@ -10,4 +11,3 @@ package common;
 message Config {
   bool verbose = 1;
 }
-

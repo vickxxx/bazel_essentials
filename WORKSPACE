@@ -1,4 +1,4 @@
-workspace(name = "org_pubref_rules_protobuf")
+workspace(name = "com_github_lingochamp_rules_protobuf")
 
 # ================================================================
 # Go support requires rules_go
@@ -14,9 +14,9 @@ http_archive(
 )
 
 new_local_repository(
-    name = “local_go_linux”,
-    path = “/usr/bin/go”,
-    build_file_content = “”,
+    name = "local_go_linux",
+    path = "/usr/lib/go",
+    build_file_content = "",
 )
 
 new_local_repository(
@@ -27,7 +27,7 @@ new_local_repository(
 
 load("@io_bazel_rules_go//go:def.bzl", "go_repositories", "new_go_repository")
 
-go_repositories(go_linux = “@local_go_linux”, go_darwin = "@local_go_mac")
+go_repositories(go_linux = "@local_go_linux", go_darwin = "@local_go_mac")
 
 # ================================================================
 # Specific Languages Support

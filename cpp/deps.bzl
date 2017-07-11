@@ -1,12 +1,14 @@
 DEPS = {
 
-    # Grpc repo is required by multiple languages but we put it here.
+    # NOTE(yi.sun): We have to keep a pre-historic version of GRPC (pre 1.0.1),
+    # as otherwise the build will fail.
+    #
+    # TODO(yi.sun): There is some important bug fixes (e.g., message length,)
+    # so switching to a newer version is still necessary.
     "com_github_grpc_grpc": {
-        "rule": "git_repository",
-        "remote": "https://github.com/grpc/grpc.git",
-        "init_submodules": True,
-        "commit": "3808b6efe66b87269d43847bc113e94e2d3d28fb",
-        #"tag": "v1.0.1",
+        "rule": "http_archive",
+        "url": "https://github.com/grpc/grpc/archive/3808b6efe66b87269d43847bc113e94e2d3d28fb.tar.gz",
+        "strip_prefix": "grpc-3808b6efe66b87269d43847bc113e94e2d3d28fb",
     },
 
     # Hooray! The boringssl team provides a "master-with-bazel" branch

@@ -2,7 +2,7 @@ package(default_visibility = ["//visibility:public"])
 
 # https://github.com/pubref/rules_protobuf/issues/57
 
-load("@org_pubref_rules_protobuf//protobuf:rules.bzl", "proto_compile")
+load("//protobuf:rules.bzl", "proto_compile")
 load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
 
 filegroup(
@@ -27,6 +27,9 @@ proto_compile(
 # pkg_tar rule is used in this example to provide a sink for the
 # descriptor file, forcing bazel to actually execute upstream
 # dependent rules.
+#
+# NOTE(yi.sun): requiring bazel version >= 0.5.2, otherwise gflags will throw
+# error.
 pkg_tar(
     name = "person_tar",
     files = [

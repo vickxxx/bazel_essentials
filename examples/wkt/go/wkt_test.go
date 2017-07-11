@@ -2,10 +2,10 @@ package wkt_test
 
 import (
 	"testing"
-	wkt "github.com/pubref/rules_protobuf/examples/wkt/go/protolib"
-	fd "github.com/golang/protobuf/protoc-gen-go/descriptor"
-)
 
+	fd "github.com/golang/protobuf/protoc-gen-go/descriptor"
+	wkt "github.com/lingochamp/rules_protobuf/examples/wkt/go/protolib"
+)
 
 func TestWkt(t *testing.T) {
 	filename := "wkt.proto"
