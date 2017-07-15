@@ -1,6 +1,7 @@
 """Go related build rules."""
 
-load("@io_bazel_rules_go//go:def.bzl", "go_binary", original_go_repositories = "go_repositories")
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", rules_go_go_repositories = "go_repositories")
+load("@io_bazel_rules_go//proto:go_proto_library.bzl", rules_go_go_proto_repositories = "go_proto_repositories")
 
 def go_repositories():
   native.new_local_repository(
@@ -13,10 +14,13 @@ def go_repositories():
       path = "/usr/local/go",   # default os x installation path
       build_file_content = "",
   )
-  original_go_repositories(
+  rules_go_go_repositories(
       go_darwin = "@local_go_mac",
       go_linux = "@local_go_linux",
   )
+  # TODO(yi.sun): Remove dependencies on go_repositories. For now we need this
+  # because of the go_package problem in rules_protobuf.
+  rules_go_go_proto_repositories()
 
 _STATIC_LINK_FLAGS = [
     "-linkmode",
