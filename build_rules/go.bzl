@@ -1,6 +1,22 @@
 """Go related build rules."""
 
-load("@io_bazel_rules_go//go:def.bzl", "go_binary")
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", original_go_repositories = "go_repositories")
+
+def go_repositories():
+  native.new_local_repository(
+      name = "local_go_linux",
+      path = "/usr/lib/go",   # docker go installation path
+      build_file_content = "",
+  )
+  native.new_local_repository(
+      name = "local_go_mac",
+      path = "/usr/local/go",   # default os x installation path
+      build_file_content = "",
+  )
+  original_go_repositories(
+      go_darwin = "@local_go_mac",
+      go_linux = "@local_go_linux",
+  )
 
 _STATIC_LINK_FLAGS = [
     "-linkmode",
@@ -9,7 +25,7 @@ _STATIC_LINK_FLAGS = [
     "-static",
 ]
 
-def static_go_binary(name, gc_linkopts="", **args):
+def static_go_binary(name, **args):
   """Produce statically linked go binary which may be put in a minimal docker.
 
   The typical go binary produced is about 12M, which is put into a minimal
