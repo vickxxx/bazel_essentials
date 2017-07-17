@@ -42,6 +42,8 @@ _lls_repository_head = repository_rule(
             cfg = "host",
         ),
     },
+    # Fetch the repository everytime env BAZEL_RUNID changes.
+    environ = ["BAZEL_RUNID"],
 )
 
 def lls_repository(name, path, commit=None, tag=None, use_local_version=0):
