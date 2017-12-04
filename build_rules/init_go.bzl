@@ -5,6 +5,6 @@ def init_go():
   # go installation packages takes forever.
   native.http_archive(
       name = "io_bazel_rules_go",
-      url = "https://github.com/bazelbuild/rules_go/archive/69cc1f1cb88496fd8d7d76a7bd8c828967faf9f0.tar.gz",
-      strip_prefix = "rules_go-69cc1f1cb88496fd8d7d76a7bd8c828967faf9f0",
+      url = "https://github.com/lingochamp/rules_go/archive/afb01df370258315bd1f74c0643e2f3ec575a1c4.tar.gz",
+      strip_prefix = "rules_go-afb01df370258315bd1f74c0643e2f3ec575a1c4",
   )
