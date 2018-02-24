@@ -18,13 +18,6 @@ def go_repositories():
       go_linux = "@local_go_linux",
   )
 
-_STATIC_LINK_FLAGS = [
-    "-linkmode",
-    "external",
-    "-extldflags",
-    "-static",
-]
-
 def static_go_binary(name, **args):
   """Produce statically linked go binary which may be put in a minimal docker.
 
@@ -34,8 +27,5 @@ def static_go_binary(name, **args):
   WARNING: It is unfortunate that the link flags only work with gcc, not clang,
   which in practice means the target will not build on Mac out of box.
   """
-  if "gc_linkopts" in args:
-    args["gc_linkopts"] += _STATIC_LINK_FLAGS
-  else:
-    args["gc_linkopts"] = _STATIC_LINK_FLAGS
+  print("WARNING: static_go_binary is deprecated, use go_binary instead!")
   go_binary(name=name, **args)
