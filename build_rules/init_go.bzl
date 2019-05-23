@@ -6,7 +6,7 @@ def init_go():
     # go_prefix, which requires us to rework ALL the repositories.
     http_archive(
         name = "io_bazel_rules_go",
-        url = "https://github.com/lingochamp/rules_go/archive/d88537f26fa530e32095957f374b26bdef9ead96.tar.gz",
-        sha256 = "7afb888865f383df09c170c65f5ede8a3aff4d463875b1aa92a5b58f304738de",
-        strip_prefix = "rules_go-d88537f26fa530e32095957f374b26bdef9ead96",
+        url = "https://github.com/lingochamp/rules_go/archive/7b83d9b47bed199d6abb42fb93502f98ab1a803c.tar.gz",
+        sha256 = "84ac4bbf12625246607312df1d07217b9c4e45e9a6734d89a5439d1aaf4074af",
+        strip_prefix = "rules_go-7b83d9b47bed199d6abb42fb93502f98ab1a803c",
     )
