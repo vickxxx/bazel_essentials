@@ -8,5 +8,5 @@ def init_go():
         name = "io_bazel_rules_go",
         url = "https://github.com/vickxxx/rules_go/archive/ca4954ca2476abba85e8a67773707d94d6341b64.tar.gz",
         sha256 = "c0bd08e01c9d077f458db69d494d55cc54454068707696a4e3dfc3c6c4613eb1",
-        strip_prefix = "rules_go-k0.7.1",
+        strip_prefix = "rules_go-ca4954ca2476abba85e8a67773707d94d6341b64",
     )
