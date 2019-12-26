@@ -6,7 +6,7 @@ def init_go():
     # go_prefix, which requires us to rework ALL the repositories.
     http_archive(
         name = "io_bazel_rules_go",
-        url = "https://github.com/vickxxx/rules_go/archive/452a9ea338a6503445efaabdbd8723f0764b1624.tar.gz",
-        sha256 = "f0d9b22baf8cc8982548bad08215f0b423b3a32f600eefb4253fed73204afbe5",
-        strip_prefix = "rules_go-452a9ea338a6503445efaabdbd8723f0764b1624",
+        url = "https://github.com/vickxxx/rules_go/archive/a188b8078eb9e7251775aaa81de3cb499148f494.tar.gz",
+        sha256 = "348adf295f282d32b214492bcd0e01ebd15733fc316357c80e54fb8bcaabd969",
+        strip_prefix = "rules_go-a188b8078eb9e7251775aaa81de3cb499148f494",
     )
